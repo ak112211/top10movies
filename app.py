@@ -1,7 +1,7 @@
 import base64
 import hashlib
 from typing import Any
-
+import os
 import flask
 from flask import Flask, render_template, redirect, url_for, request
 from flask_bootstrap import *
@@ -214,4 +214,5 @@ def unauthorized():
 
 
 if __name__ == '__main__':
-    app.run()
+    port = int(os.environ.get("PORT", 5000))
+    app.run(debug=True, port=port)
