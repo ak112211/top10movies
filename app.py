@@ -28,7 +28,7 @@ from sqlalchemy.orm import *
 from flask_bcrypt import Bcrypt
 from flask_migrate import Migrate
 
-app = Flask(__name__)
+app = Flask(__name__ , template_folder='templates')
 app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
 app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///movie.db"
 db = SQLAlchemy(app)
