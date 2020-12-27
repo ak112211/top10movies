@@ -1,1 +1,1 @@
-web: gunicorn top10movies:app
+web: gunicorn app:app
